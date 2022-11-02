@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+
+
+{% for costume in products|reverse%}
+<a href = "{{path('app_Info',{id:costume.getId})}}" class="border">
+    <h1>{{costume.getName}}</h1>
+    <h2>{{costume.getPrice}} €</h2>
+    <h3>{{costume.getDescription}}</h3>
+</a>
+{% endfor %}
+
+{% endblock %}

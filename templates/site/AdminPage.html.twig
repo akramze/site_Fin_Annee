@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<a href="{{path('app_logout')}}">logout</a>
+{% for costume in products%}
+<div class="border w-3/4 ">
+    <h1>{{costume.getName}}</h1>
+    <div class="pt-6 mx-8">
+        <a class="" href="{{path('app_Delete',{id:costume.getId}) }}">Delete</a>
+        <a class="" href="{{path('app_Update',{id:costume.getId}) }}">Update</a>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}
